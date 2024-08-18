@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <!-- <link rel="stylesheet" href="/self_learning/style.css"> -->
+    <style>
+     body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background: url('/img/background.jpg') no-repeat center center fixed; 
+    background-size: cover;  */
+    background-color: rgb(184, 232, 203);
+    
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a img {
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image covers the given dimensions */
+}
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Individual slides */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    opacity: 0.8;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add vertical padding */
+    position: relative; /* Ensures footer stays at the bottom */
+    bottom: 0;
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="/img/logo2.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Help.html">Help</a></li>
+                <li><a href="SignUp.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to My Webpage</h1>
+        <p>This is a sample webpage with a navigation bar.</p>
+
+        <!-- Image Slider Section -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="/img/food1.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="/img/food2.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="/img/food6.jpg" alt="Slide 3"></div>
+                <div class="slide"><img src="/img/food7.jpg" alt="Slide 4"></div>
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Your Company Name. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

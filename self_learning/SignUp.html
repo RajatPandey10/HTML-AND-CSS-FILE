@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(231, 254, 185);
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a img {
+            height: 50px; /* Adjust the height as needed */
+            border-radius: 50%; /* Makes the image round */
+            object-fit: cover; /* Ensures the image covers the given dimensions */
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px); /* Adjust based on header height */
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(201, 9, 9, 0.2);
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .signup-form input, .signup-form select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #584646;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .signup-form .required {
+            color: red;
+        }
+
+        .signup-form button {
+            background-color: #11e815;
+            color: #fcf6f6;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signup-form button:hover {
+            background-color: rgb(110, 110, 243);
+        }
+
+        .social-login {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-login p {
+            margin: 10px 0;
+        }
+
+        .email-login {
+            background-color: #11e815;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .email-login:hover {
+            background-color: rgb(110, 110, 243);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="/img/logo2.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Help.html">Login</a></li>
+                <li><a href="SignUp.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <main>
+        <div class="container">
+            
+                <h1>Sign Up</h1>
+            
+            <form class="signup-form" action="Home.html">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="dob">Date of Birth <span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="mobile">Mobile Number (Optional)</label>
+                <input type="tel" id="mobile" name="mobile">
+
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <div class="social-login">
+                <p>Or continue with</p>
+                <button class="email-login">Continue with Email</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
